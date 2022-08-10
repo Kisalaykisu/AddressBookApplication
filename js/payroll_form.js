@@ -67,10 +67,11 @@ window.addEventListener("DOMContentLoaded", (event) => {
     }
   });
 });
-const save = () => {
+const save = (event) => {
   try {
     let employeePayrollData = createEmployeePayroll();
     createAndUpdateStorage(employeePayrollData);
+    window.location.replace(site_properties.home_page);
   } catch (e) {
     return;
   }
