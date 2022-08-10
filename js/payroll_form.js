@@ -67,10 +67,11 @@ window.addEventListener("DOMContentLoaded", (event) => {
     }
   });
 });
-const save = () => {
+const save = (event) => {
   try {
     let employeePayrollData = createEmployeePayroll();
     createAndUpdateStorage(employeePayrollData);
+    window.location.replace(site_properties.home_page);
   } catch (e) {
     return;
   }
@@ -84,6 +85,7 @@ const createEmployeePayroll = () => {
     setTextValue(".name-error", e);
     throw e;
   }
+  employeePayrollData.id = createNewEmployeeId();
   employeePayrollData.profilePic = getSelectedValues("[name=profile]").pop();
   employeePayrollData.gender = getSelectedValues("[name=gender]").pop();
   employeePayrollData.department = getSelectedValues("[name=department]");
@@ -156,4 +158,11 @@ const setTextValue = (id, value) => {
 const setValue = (id, value) => {
   const element = document.querySelector(id);
   element.value = value;
+};
+
+const createNewEmployeeId = () => {
+  let empId = localStorage.getItem("empID");
+  empId = !empId ? 1 : (parseInt(empId) + 1).toString();
+  localStorage.setItem("empID", empId);
+  return empId;
 };
