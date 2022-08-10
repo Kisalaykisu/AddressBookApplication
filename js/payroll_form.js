@@ -79,6 +79,7 @@ const createEmployeePayroll = () => {
   let employeePayrollData = new EmployeePayrollData();
   try {
     employeePayrollData.name = document.querySelector("#name").value;
+    createAndUpdateStorage(employeePayrollData);
   } catch (e) {
     setTextValue(".name-error", e);
     throw e;
@@ -107,3 +108,20 @@ const getSelectedValues = (propertyValue) => {
   });
   return selItems;
 };
+
+function createAndUpdateStorage(employeePayrollData) {
+  let employeePayrollList = JSON.parse(
+    localStorage.getItem("EmployeePayrollList")
+  );
+
+  if (employeePayrollList != undefined) {
+    employeePayrollList.push(employeePayrollData);
+  } else {
+    employeePayrollList = [employeePayrollData];
+  }
+  alert(employeePayrollList.toString());
+  localStorage.setItem(
+    "EmployeePayrollList",
+    JSON.stringify(employeePayrollList)
+  );
+}
