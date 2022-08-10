@@ -65,7 +65,7 @@ class EmployeePayrollData {
     previous.setDate(previous.getDate() - 30);
     if (new Date(empDate) <= new Date() && new Date(empDate) >= previous)
       this._startDate = empDate;
-    else throw "Invalid Date";
+    else throw "Invalid Date: should be within 30 days of joining.";
   }
 
   toString() {
@@ -89,19 +89,3 @@ class EmployeePayrollData {
     );
   }
 }
-let obj = new EmployeePayrollData();
-try {
-  obj.startDate = new Date("1/5/2021");
-  console.log(obj);
-} catch (e) {
-  console.error(e);
-}
-
-const save = () => {
-  try {
-    let employeePayrollData = new EmployeePayrollData();
-    alert(employeePayrollData.toString());
-  } catch (e) {
-    return;
-  }
-};
