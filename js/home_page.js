@@ -45,7 +45,7 @@ const createEmployeePayrollJSON = () => {
       _profilePic: "../assets/profile-images/Ellipse -2.png",
     },
     {
-      _name: "Madhukar Tatiraju",
+      _name: "Kisalay Srivastava",
       _gender: "Male",
       _department: ["Engineer", "Finance"],
       _salary: "350000",
