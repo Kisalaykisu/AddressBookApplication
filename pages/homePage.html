@@ -16,7 +16,6 @@
       rel="stylesheet"
     />
     <title>Employee Payroll App-HomePage</title>
-    <script defer src="../js/home_page.js"></script>
   </head>
   <body>
     <header class="header-content header">
@@ -28,5 +27,21 @@
         </div>
       </div>
     </header>
+    <div class="main-content">
+      <div class="header-content">
+        <div class="emp-detail-text">
+          Employee Details
+          <div class="emp-count">10</div>
+        </div>
+        <a href="../pages/EmployeePayrollApp.html" class="add-button">
+          <img src="../assets/icons/add-24px.svg" alt="add icon" />Add User
+        </a>
+      </div>
+      <table id="table-display" class="table"></table>
+    </div>
+    <script defer src="../js/home_page.js"></script>
+    <script defer src="../js/utilities.js"></script>
+    <script defer src="../js/site_properties.js"></script>
+    <script defer src="../js/EmployeePayrollData.js"></script>
   </body>
 </html>
