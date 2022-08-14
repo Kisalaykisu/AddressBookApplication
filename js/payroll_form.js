@@ -76,7 +76,8 @@ const save = (event) => {
   try {
     let employeePayrollData = createEmployeePayroll();
     createAndUpdateStorage(employeePayrollData);
-    window.location.replace(site_properties.home_page);
+    //window.location.replace(site_properties.home_page);
+    alert("Added successfully");
   } catch (e) {
     return;
   }
