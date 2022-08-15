@@ -1,10 +1,9 @@
 const nameRegex = RegExp("^[A-Z]{1}[A-Za-z\\s]{2,}$");
 const phoneNumberRegex = RegExp("^[0-9]{2}\\s{1}[7-9]{1}[0-9]{9}$");
-const addressRegex = RegExp('^[a-zA-Z0-9#,&]{4,}$');
+const addressRegex = RegExp("^[a-zA-Z0-9#,&\\s]{4,}$");
 const zipRegex = RegExp("^[0-9]{3}\\s{0,1}[0-9]{3}$");
 
 class Contact {
-  
   get id() {
     return this._id;
   }
@@ -31,7 +30,7 @@ class Contact {
       this._phoneNumber = phoneNumber;
     } else {
       throw "PHONE NUMBER is Invalid!";
-    }   
+    }
   }
 
   get address() {
@@ -44,14 +43,14 @@ class Contact {
       throw "ADDRESS is Invalid!";
     }
   }
-  
+
   get city() {
     return this._city;
   }
   set city(city) {
     this._city = city;
   }
-  
+
   get state() {
     return this._state;
   }
@@ -70,8 +69,7 @@ class Contact {
     }
   }
 
-  toString(){
-      return `id ${this.id} \nName ${this.name} \nPhone Number ${this.phoneNumber} \nAddress ${this.address} \nCity ${this.city} \nState ${this.state} \nZip  ${this.zip}`;
+  toString() {
+    return `id ${this.id} \nName ${this.name} \nPhone Number ${this.phoneNumber} \nAddress ${this.address} \nCity ${this.city} \nState ${this.state} \nZip  ${this.zip}`;
   }
-
 }
