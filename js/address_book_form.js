@@ -70,6 +70,27 @@ const validateZipcode = () => {
 };
 
 const save = () => {
+  try {
+    let contact = createContact();
+    createAndUpdateStorage(contact);
+  } catch (error) {
+    alert(error);
+  }
+};
+
+const createAndUpdateStorage = (contact) => {
+  let contactList = JSON.parse(localStorage.getItem("ContactList"));
+  if (contactList != undefined) {
+    contactList.push(contact);
+  } else {
+    contactList = [contact];
+  }
+  alert(contact.toString());
+  alert("Contact Added Sucessfully");
+  localStorage.setItem("ContactList", JSON.stringify(contactList));
+};
+
+const createContact = () => {
   let contact = new Contact();
   contact.id = new Date().getTime();
 
@@ -116,6 +137,7 @@ const save = () => {
   }
 
   alert(contact.toString());
+  return contact;
 };
 
 const setTextValue = (id, value) => {
