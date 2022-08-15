@@ -1,3 +1,4 @@
-# HTML5_EmpPayroll_LocalStorage
+AddressBookApplication
+Bridgelabz: Address Book Application using HTML CSS and JavaScript
 
-Employee Payroll App - Add Employee to HTML 5 Local Storage(Day 44,Day45,Day46)
+The address book needs to store name, address, telephone number, postal code, Email, home phone and other information.
