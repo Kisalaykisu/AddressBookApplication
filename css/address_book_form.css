@@ -163,8 +163,6 @@ select {
 .zipcode {
   padding: 15px 12px;
 }
-<<<<<<< HEAD
-=======
 
 /* uc 4 */
 error-output {
@@ -173,4 +171,3 @@ error-output {
   font-style: italic;
   color: red;
 }
->>>>>>> Day44_UC4_SaveObjectToLocalStorage
