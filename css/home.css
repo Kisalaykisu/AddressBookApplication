@@ -1,6 +1,19 @@
+/* UC 10 */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  background-color: #f7f7f7;
+}
+
 .header {
-  padding: 15px 0;
-  background-color: #ffffff;
+  padding: 10px 0;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  opacity: 1;
 }
 
 .header-content {
@@ -8,123 +21,139 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border: 0px solid green;
 }
 
 .logo-content {
   display: flex;
   flex-direction: row;
   align-items: center;
-  border: 0px solid green;
   width: 80%;
 }
 
-.logo-content-img {
-  border: solid 0px #42515f;
-}
-
-.emp-text {
-  font: normal normal bold 20px/25px Montserrat;
-  font-family: "Montserrat", sans-serif;
+.addressBook-text {
+  font: normal normal bold 22px/25px Montserrat;
+  text-align: left;
   letter-spacing: 0px;
-  color: #82a70c;
-  text-transform: capitalize;
+  text-transform: uppercase;
+  opacity: 1;
+  color: #008cff;
+  margin-left: 10px;
 }
 
-.emp-payroll {
+.addressBook-book {
   color: #42515f;
 }
 
+/* UC 11 */
+
 .main-content {
-  display: flex;
-  flex-direction: column;
-  min-height: calc(100vh - 80px);
+  min-height: calc(100% - 80px);
   background-color: #f7f7f7;
-  padding: 30px 0 10px;
-  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0px solid green;
 }
 
-.header-content {
+.main-header-content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
   width: 80%;
   margin: 0 auto;
-  padding-bottom: 25px;
+  padding: 25px;
 }
 
-.emp-detail-text {
+.addressbook-detail-text {
   font: normal normal bold 24px/25px Roboto;
   letter-spacing: 0px;
   color: #42515f;
   opacity: 1;
+  text-align: left;
 }
 
-.emp-count {
-  background-color: #82a70c;
+.contact-count {
+  background-color: #008cff;
   color: #ffffff;
+  border-radius: 42%;
   font-size: 16px;
   width: 26px;
-  border-radius: 40%;
   text-align: center;
   display: inline-block;
+  padding-right: 1px;
 }
 
 .add-button {
-  display: flex;
-  flex-direction: row;
-  font: normal normal normal 20px/29px Roboto;
+  font: normal normal normal 22px/29px Roboto;
   letter-spacing: 0px;
   color: #ffffff;
   opacity: 1;
-  background: #82a70c 0% 0% no-repeat padding-box;
+  background: #008cff 0% 0% no-repeat padding-box;
   border: none;
-  border-radius: 4px;
-  padding: 2px 10px;
+  border-radius: 5px;
+  padding: 5px 18px;
   outline: none;
   cursor: pointer;
   text-decoration: none;
 }
 
-.table-main {
+/* UC 12 */
+
+.table-main{
   width: 80%;
   margin: 0 auto;
   overflow: auto;
 }
 
-.table {
+.table{
   width: 100%;
   border-collapse: separate;
   border-spacing: 0 15px;
   min-width: 800px;
 }
 
-td,
-th {
+td,th{
   text-align: left;
-  padding: 5px 8px;
-  border: 0px solid green;
+  padding: 22px 50px;
+
 }
 
-th {
-  background: #42515f 0% 0% no-repeat padding-box;
-  border-radius: 0px;
-
+th{
   text-align: left;
   font: normal normal medium 18px/24px Roboto;
   letter-spacing: 0px;
-  color: #ffffff;
-  text-transform: uppercase;
+  color: #658292;
+  text-transform: capitalize;
   opacity: 1;
   border: 0px solid #dddddd;
+  margin-bottom: 5px;
 }
 
-tr:not(:first-child) {
+tr:not(:first-child){
   background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #e3e3e3;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+td{
+  font: normal normal normal 14px/21px Roboto;
   letter-spacing: 0px;
   color: #3d3d3d;
   opacity: 1;
+}
+
+td:first-child{
+  display: flex;
+  align-items: center;
+}
+
+td img:first-child{
+  margin-right: 10px;
+}
+
+td img{
+  cursor: pointer;
 }
 
 td {
@@ -141,25 +170,8 @@ td:first-child {
 
 td img:first-child {
   margin-right: 10px;
-  margin-left: 10px;
 }
 
 td img {
   cursor: pointer;
-}
-
-.dept-label {
-  background-color: #e9fea5;
-  border-radius: 40%;
-  width: fit-content;
-  padding: 1px 7px;
-  text-align: center;
-  font-size: 14px;
-  display: inline-block;
-  font-weight: 300;
-}
-
-.profile {
-  display: flex;
-  justify-content: center;
 }
